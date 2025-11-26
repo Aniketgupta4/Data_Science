@@ -276,20 +276,63 @@ print(s)
 s.pop()
 print(s)
 
-s.clear()
-print(s)
+print(s.clear())
 
-s.union(s1)
-print(s1)
+print(s.union(s1))
 
-s.intersection(s1)
-print(s1)
+print(s.intersection(s1))
 
 
 
 
 
+# q1 -> store hai name and subject 
 
+info =[
+   ("alice","math"),
+   ("bob","science"),
+   ("alice","science"),
+   ("charlie","math"),
+   ("bob","math"),
+   ("alice","english"),
+   ("charlie","english")
+]
+
+
+# access all unique courses
+
+
+unique_courses_set = set()
+
+for tup in info:
+   unique_courses_set.add(tup[1]) # tup[1] -> course , tup[0] -> name
+
+print(unique_courses_set)
+
+
+# print name and courses 
+
+for name,course in info:
+   print(name,course)
+
+
+# list students enolled in english
+
+for name,course in info:
+   if(course == "english"):
+      print(name)
+   
+
+# create dictionary (student , set of courses)
+
+dict = {}
+
+for name,course in info:
+   if dict.get(name) == None:  # key not exist in dictionary then add name
+      dict.update({name:set()})
+      dict[name].add(course)
+   else:
+      dict[name].add(course) # if name exists then only add course
 
 
 
