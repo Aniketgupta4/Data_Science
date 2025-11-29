@@ -362,7 +362,6 @@ t1.get_designation()
 
 # duck type -> same name de shakte hai function ko in different class
 
-=
 
 
 
