@@ -198,5 +198,3 @@ d = {
 
 with open("data.json","w") as f:
    json.dumps(d,f,indent=4,sort_keys=True)
-
-
